@@ -56,10 +56,23 @@
     .skip-link:focus { transform: translateY(0); }
     .wrap { width: min(1160px, calc(100% - 64px)); margin-inline: auto; }
     .eyebrow { margin: 0; color: var(--orange); font-size: .76rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
     .hero-shell { position: relative; isolation: isolate; overflow: hidden; color: var(--cream); background: #161513; }
     .hero-shell::before { content: ''; position: absolute; z-index: -1; width: 690px; height: 690px; right: -160px; top: 40px; border: 1px solid rgba(238,90,38,.18); border-radius: 50%; box-shadow: 0 0 0 110px rgba(238,90,38,.035), 0 0 0 220px rgba(238,90,38,.025); }
-    .site-nav { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid rgba(247,241,231,.17); }
+    .site-nav { position: relative; z-index: 2; min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid rgba(247,241,231,.17); }
+    .nav-leading { display: flex; align-items: center; gap: 14px; }
+    .site-menu { position: relative; }
+    .site-menu summary { display: grid; place-items: center; width: 39px; height: 39px; border: 1px solid rgba(247,241,231,.4); cursor: pointer; list-style: none; }
+    .site-menu summary::-webkit-details-marker { display: none; }
+    .site-menu summary:hover, .site-menu[open] summary { border-color: var(--orange); background: rgba(238,90,38,.1); }
+    .site-menu summary:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    .menu-icon { display: flex; flex-direction: column; gap: 4px; }
+    .menu-icon span { display: block; width: 17px; height: 2px; background: var(--cream); }
+    .menu-panel { position: absolute; top: calc(100% + 12px); left: 0; width: min(275px, calc(100vw - 40px)); padding: 7px; border: 1px solid rgba(247,241,231,.28); background: #25211d; box-shadow: 0 18px 34px rgba(0,0,0,.38); }
+    .menu-panel a { display: block; padding: 13px 12px; color: var(--cream); font-size: .84rem; font-weight: 700; line-height: 1.3; text-decoration: none; }
+    .menu-panel a + a { border-top: 1px solid rgba(247,241,231,.14); }
+    .menu-panel a:hover, .menu-panel a:focus-visible { background: rgba(238,90,38,.16); color: #ff9b70; }
     .brand { display: inline-flex; align-items: center; gap: 13px; text-decoration: none; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
     .brand-mark { display: grid; place-items: center; width: 39px; height: 39px; border: 1px solid var(--orange); color: var(--orange); font-family: var(--serif); font-size: 1.1rem; letter-spacing: -.09em; padding-right: .12em; }
     .nav-links { display: flex; align-items: center; gap: 32px; }
@@ -165,6 +178,8 @@
       .closing::after { font-size: 24rem; bottom: -90px; }
     }
     @media (max-width: 480px) {
+      .nav-leading { gap: 9px; }
+      .site-menu summary { width: 33px; height: 33px; }
       .brand { font-size: .67rem; gap: 8px; }
       .brand-mark { width: 33px; height: 33px; }
       .nav-links .nav-buy { font-size: .7rem; }
@@ -188,7 +203,16 @@
   <main>
   <div class="hero-shell">
     <header class="site-nav wrap">
-      <a class="brand" href="https://attilakulik.com/" aria-label="Attila Kulik, home"><span class="brand-mark" aria-hidden="true">AK</span><span>Attila Kulik</span></a>
+      <div class="nav-leading">
+        <details class="site-menu">
+          <summary><span class="sr-only">Open site menu</span><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></summary>
+          <nav class="menu-panel" aria-label="Other blogs">
+            <a href="https://philosophy.attilakulik.com/">Subjective History of Philosophy</a>
+            <a href="https://tech.attilakulik.com/">The History of Computer Science</a>
+          </nav>
+        </details>
+        <a class="brand" href="https://attilakulik.com/" aria-label="Attila Kulik, home"><span class="brand-mark" aria-hidden="true">AK</span><span>Attila Kulik</span></a>
+      </div>
       <nav class="nav-links" aria-label="Page navigation">
         <a href="#inside">Inside the book</a>
         <a class="nav-buy" href="#get-the-book">Get the book</a>
