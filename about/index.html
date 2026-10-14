@@ -50,12 +50,16 @@
     .brand-mark { display: grid; place-items: center; width: 39px; height: 39px; border: 1px solid var(--orange); color: var(--orange); font-family: var(--serif); font-size: 1.1rem; letter-spacing: -.09em; padding-right: .12em; }
     .back-link { font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-decoration: none; }
     main { min-height: calc(100vh - 157px); }
-    .page-head { padding-block: 62px 34px; border-bottom: 1px solid #d8d0c4; }
+    .about-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, 290px); align-items: center; gap: clamp(55px, 8vw, 110px); padding-block: clamp(78px, 9vw, 112px) clamp(88px, 10vw, 126px); }
     .eyebrow { margin: 0; color: #a74721; font-size: .76rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
-    .bio { padding-block: 55px clamp(90px, 13vw, 145px); }
-    .bio p { max-width: 720px; margin: 0; color: #3e3932; font: normal clamp(1.16rem, 1.5vw, 1.33rem)/1.65 var(--serif); }
+    .bio { margin: 28px 0 0; color: #3e3932; font: normal clamp(1.16rem, 1.5vw, 1.33rem)/1.65 var(--serif); }
     .bio a { color: #a74721; }
     .bio a:hover { color: #ee5a26; }
+    .book-link { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; margin-top: 32px; padding: 12px 20px; color: #18130f; background: var(--orange); font-size: .82rem; font-weight: 800; letter-spacing: .06em; text-decoration: none; }
+    .book-link:hover { background: #ff7441; }
+    .cover-stage { position: relative; display: block; width: min(100%, 290px); justify-self: center; padding: 14px 22px 18px 0; }
+    .cover-stage::before { content: ''; position: absolute; inset: 8% -2% 4% 12%; border: 1px solid rgba(238,90,38,.65); transform: rotate(5deg); }
+    .cover-stage img { position: relative; display: block; width: 100%; height: auto; border-radius: 2px; box-shadow: 22px 28px 38px rgba(0,0,0,.3), 3px 5px 9px rgba(0,0,0,.25); transform: rotate(-4deg); }
     footer { padding-block: 24px; border-top: 1px solid #d8d0c4; background: var(--paper); }
     footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: .77rem; }
     @media (max-width: 680px) {
@@ -66,6 +70,13 @@
       .brand { gap: 8px; font-size: .67rem; }
       .brand-mark { width: 33px; height: 33px; }
       .back-link { font-size: .72rem; }
+      .about-intro { grid-template-columns: 1fr; gap: 58px; padding-block: 72px 90px; }
+      .cover-stage { width: min(70%, 290px); }
+    }
+    @media (max-width: 480px) {
+      .about-intro { gap: 54px; padding-block: 62px 80px; }
+      .bio { margin-top: 24px; }
+      .cover-stage { width: min(78%, 270px); }
     }
   </style>
 </head>
@@ -88,13 +99,15 @@
     </nav>
   </header>
   <main>
-    <div class="page-head">
-      <div class="wrap">
+    <section class="about-intro wrap" aria-labelledby="about-title">
+      <div class="about-copy">
         <h1 id="about-title" class="eyebrow">The author</h1>
+        <p class="bio">Attila Kulik is a writer based in Cambridge, UK. While revising his speculative fiction manuscript, he set out to understand why some passages resonated with beta readers and others did not. That research became <a href="/the-craft-behind-the-story/"><em>The Craft Behind the Story</em></a>, a practical guide for writers who know their manuscript needs work but aren’t sure what to change or where to begin. He is now applying its methods to his own manuscript.</p>
+        <a class="book-link" href="/the-craft-behind-the-story/">Explore the book <span aria-hidden="true">&nbsp;↗</span></a>
       </div>
-    </div>
-    <section class="bio wrap" aria-label="Author biography">
-      <p>Attila Kulik is a writer based in Cambridge, UK. While revising his speculative fiction manuscript, he set out to understand why some passages resonated with beta readers and others did not. That research became <a href="/the-craft-behind-the-story/"><em>The Craft Behind the Story</em></a>, a practical guide for writers who know their manuscript needs work but aren’t sure what to change or where to begin. He is now applying its methods to his own manuscript.</p>
+      <a class="cover-stage" href="/the-craft-behind-the-story/" aria-label="Explore The Craft Behind the Story">
+        <img src="/the-craft-behind-the-story/cover.jpg" width="1000" height="1600" alt="The Craft Behind the Story book cover" loading="eager">
+      </a>
     </section>
   </main>
   <footer><div class="wrap"><span>© 2026 Attila Kulik</span><a href="/the-craft-behind-the-story/">Explore The Craft Behind the Story</a></div></footer>
