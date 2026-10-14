@@ -46,9 +46,9 @@
     .menu-panel a + a { border-top: 1px solid rgba(247,241,231,.14); }
     .menu-panel a:hover, .menu-panel a:focus-visible { background: rgba(238,90,38,.16); color: #ff9b70; }
     .brand { display: inline-flex; align-items: center; gap: 13px; text-decoration: none; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-    .brand:hover, .back-link:hover { color: #ff9b70; }
+    .brand:hover, .nav-buy:hover { color: #ff9b70; }
     .brand-mark { display: grid; place-items: center; width: 39px; height: 39px; border: 1px solid var(--orange); color: var(--orange); font-family: var(--serif); font-size: 1.1rem; letter-spacing: -.09em; padding-right: .12em; }
-    .back-link { font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-decoration: none; }
+    .nav-buy { padding: 11px 16px; border: 1px solid rgba(247,241,231,.55); font-size: .79rem; font-weight: 700; letter-spacing: .05em; text-decoration: none; }
     main { min-height: calc(100vh - 157px); }
     .about-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, 290px); align-items: center; gap: clamp(55px, 8vw, 110px); padding-block: clamp(78px, 9vw, 112px) clamp(88px, 10vw, 126px); }
     .eyebrow { margin: 0; color: #a74721; font-size: .76rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
@@ -69,11 +69,12 @@
       .site-menu summary { width: 33px; height: 33px; }
       .brand { gap: 8px; font-size: .67rem; }
       .brand-mark { width: 33px; height: 33px; }
-      .back-link { font-size: .72rem; }
+      .nav-buy { padding: 9px 12px; }
       .about-intro { grid-template-columns: 1fr; gap: 58px; padding-block: 72px 90px; }
       .cover-stage { width: min(70%, 290px); }
     }
     @media (max-width: 480px) {
+      .nav-buy { font-size: .7rem; }
       .about-intro { gap: 54px; padding-block: 62px 80px; }
       .bio { margin-top: 24px; }
       .cover-stage { width: min(78%, 270px); }
@@ -95,7 +96,7 @@
         </details>
         <a class="brand" href="/about/" aria-current="page"><span class="brand-mark" aria-hidden="true">AK</span><span>Attila Kulik</span></a>
       </div>
-      <a class="back-link" href="/the-craft-behind-the-story/">The book ↗</a>
+      <a class="nav-buy" href="/the-craft-behind-the-story/#get-the-book">Get the book</a>
     </nav>
   </header>
   <main>
