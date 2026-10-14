@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161513">
+  <meta name="author" content="Attila Kulik">
+  <meta name="description" content="The Craft Behind the Story by Attila Kulik: a systematic guide to structuring and revising fiction, from the scene to the whole novel.">
+  <link rel="canonical" href="https://attilakulik.com/the-craft-behind-the-story/">
+  <meta property="og:type" content="book">
+  <meta property="og:title" content="The Craft Behind the Story — Attila Kulik">
+  <meta property="og:description" content="A systematic guide to structuring and revising fiction, from the scene to the whole novel.">
+  <meta property="og:url" content="https://attilakulik.com/the-craft-behind-the-story/">
+  <meta property="og:image" content="https://attilakulik.com/the-craft-behind-the-story/cover.jpg">
+  <meta property="og:image:alt" content="Cover of The Craft Behind the Story by Attila Kulik">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>The Craft Behind the Story — Attila Kulik</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "The Craft Behind the Story",
+      "alternativeHeadline": "A Systematic Guide to Structuring and Revising Fiction",
+      "author": {"@type": "Person", "name": "Attila Kulik"},
+      "bookFormat": "https://schema.org/EBook",
+      "inLanguage": "en-GB",
+      "image": "https://attilakulik.com/the-craft-behind-the-story/cover.jpg",
+      "url": "https://attilakulik.com/the-craft-behind-the-story/",
+      "sameAs": [
+        "https://www.amazon.co.uk/dp/B0HM3SKSG8",
+        "https://books.apple.com/gb/book/the-craft-behind-the-story/id6820381869"
+      ],
+      "description": "A guide for novelists to the structure of a novel, from the scene to the whole book, with diagnostic tests, failure patterns and revision checklists for each unit."
+    }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #191714;
+      --cream: #f7f1e7;
+      --paper: #fffcf6;
+      --muted: #615b53;
+      --orange: #ee5a26;
+      --line: #d8d0c4;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: 'Avenir Next', Avenir, 'Segoe UI', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--cream); font-family: var(--sans); }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    img { display: block; max-width: 100%; }
+    .skip-link { position: absolute; z-index: 10; top: 10px; left: 10px; padding: 10px 14px; background: var(--paper); color: var(--ink); transform: translateY(-160%); }
+    .skip-link:focus { transform: translateY(0); }
+    .wrap { width: min(1160px, calc(100% - 64px)); margin-inline: auto; }
+    .eyebrow { margin: 0; color: var(--orange); font-size: .76rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+
+    .hero-shell { position: relative; isolation: isolate; overflow: hidden; color: var(--cream); background: #161513; }
+    .hero-shell::before { content: ''; position: absolute; z-index: -1; width: 690px; height: 690px; right: -160px; top: 40px; border: 1px solid rgba(238,90,38,.18); border-radius: 50%; box-shadow: 0 0 0 110px rgba(238,90,38,.035), 0 0 0 220px rgba(238,90,38,.025); }
+    .site-nav { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid rgba(247,241,231,.17); }
+    .brand { display: inline-flex; align-items: center; gap: 13px; text-decoration: none; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .brand-mark { display: grid; place-items: center; width: 39px; height: 39px; border: 1px solid var(--orange); color: var(--orange); font-family: var(--serif); font-size: 1.1rem; letter-spacing: -.09em; padding-right: .12em; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { text-decoration: none; font-size: .79rem; font-weight: 700; letter-spacing: .05em; }
+    .nav-links a:hover, .brand:hover { color: #ff9b70; }
+    .nav-links .nav-buy { padding: 11px 16px; border: 1px solid rgba(247,241,231,.55); }
+
+    .hero { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(300px, .82fr); align-items: center; gap: clamp(44px, 6vw, 90px); min-height: 680px; padding-block: 72px 84px; }
+    .hero-copy { max-width: 660px; }
+    .hero h1 { margin: 18px 0 20px; font: normal clamp(3.6rem, 7.1vw, 6.5rem)/.98 var(--serif); letter-spacing: -.055em; text-wrap: balance; }
+    .hero h1 em { display: block; color: var(--orange); font-weight: normal; }
+    .subtitle { margin: 0 0 28px; color: #e8dfd2; font: normal clamp(1.16rem, 2vw, 1.5rem)/1.38 var(--serif); }
+    .hero-summary { max-width: 560px; margin: 0 0 34px; color: #c7c0b5; font-size: 1.02rem; line-height: 1.7; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 11px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 12px 20px; border: 1px solid transparent; font-size: .82rem; font-weight: 800; letter-spacing: .06em; text-decoration: none; transition: background .2s, color .2s, transform .2s; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: #18130f; background: var(--orange); }
+    .button-primary:hover { background: #ff7441; }
+    .button-outline { border-color: rgba(247,241,231,.55); color: var(--cream); }
+    .button-outline:hover { background: var(--cream); color: var(--ink); }
+    .hero-note { margin: 20px 0 0; color: #b2a99c; font-size: .78rem; letter-spacing: .03em; }
+    .cover-stage { position: relative; width: min(100%, 408px); justify-self: center; padding: 14px 22px 18px 0; }
+    .cover-stage::before { content: ''; position: absolute; inset: 8% -2% 4% 12%; border: 1px solid rgba(238,90,38,.65); transform: rotate(5deg); }
+    .cover-stage img { position: relative; width: 100%; height: auto; border-radius: 2px; box-shadow: 22px 28px 38px rgba(0,0,0,.44), 3px 5px 9px rgba(0,0,0,.35); transform: rotate(-4deg); }
+
+    .strip { border-bottom: 1px solid var(--line); background: var(--paper); }
+    .strip-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding-block: 22px; }
+    .strip p { margin: 0; font-size: .78rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .strip span { color: var(--orange); padding-inline: 15px; }
+    .strip .format { color: var(--muted); font-size: .78rem; }
+
+    .intro { display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); gap: clamp(45px, 8vw, 120px); padding-block: 112px 118px; }
+    .section-kicker { display: flex; align-items: center; gap: 16px; color: #a74721; font-size: .76rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .section-kicker::before { content: ''; width: 32px; height: 1px; background: var(--orange); }
+    .intro h2, .section-heading h2, .practice h2, .closing h2 { margin: 17px 0 0; font: normal clamp(2.45rem, 4.4vw, 4.5rem)/1.06 var(--serif); letter-spacing: -.045em; text-wrap: balance; }
+    .intro-copy { padding-top: 8px; }
+    .intro-copy p { margin: 0 0 24px; color: #3e3932; font: normal clamp(1.16rem, 1.5vw, 1.33rem)/1.65 var(--serif); }
+    .intro-copy p:last-child { margin-bottom: 0; }
+    .intro-copy strong { color: var(--ink); }
+
+    .parts { padding-block: 95px 104px; background: #eae2d6; }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 39px; }
+    .section-heading h2 { max-width: 630px; }
+    .section-heading > p { max-width: 275px; margin: 0 0 6px; color: var(--muted); font-size: .93rem; line-height: 1.6; }
+    .part-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1px; background: #cfc5b7; border: 1px solid #cfc5b7; }
+    .part-card { min-height: 360px; padding: 29px 25px 32px; background: var(--paper); }
+    .part-number { display: block; margin-bottom: 55px; color: #ba4c25; font: normal 2.7rem/1 var(--serif); }
+    .part-card h3 { margin: 0 0 17px; font: normal 1.64rem/1.16 var(--serif); letter-spacing: -.025em; }
+    .part-card p { margin: 0; color: var(--muted); font-size: .91rem; line-height: 1.65; }
+
+    .practice { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(55px, 8vw, 126px); padding-block: 118px; }
+    .practice-lead { margin: 25px 0 0; color: var(--muted); font: normal 1.16rem/1.6 var(--serif); }
+    .practice-list { align-self: center; border-top: 1px solid var(--line); }
+    .practice-item { display: grid; grid-template-columns: 58px 1fr; gap: 17px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .practice-item > span { color: #b44720; font: normal 1.5rem/1.1 var(--serif); }
+    .practice-item h3 { margin: 0 0 6px; font: 700 1rem/1.3 var(--sans); }
+    .practice-item p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.55; }
+
+    .quote-band { background: #24211d; color: var(--cream); }
+    .quote-band .wrap { display: grid; grid-template-columns: 160px 1fr; align-items: center; gap: 60px; padding-block: 62px; }
+    .quote-symbol { color: var(--orange); font: normal 10rem/.7 var(--serif); }
+    .quote-band blockquote { margin: 0; font: normal clamp(1.6rem, 3vw, 2.8rem)/1.3 var(--serif); letter-spacing: -.025em; }
+    .quote-band cite { display: block; margin-top: 17px; color: #c3b9ab; font: normal .8rem/1.4 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+
+    .closing { position: relative; overflow: hidden; padding-block: 112px 120px; background: var(--paper); }
+    .closing::after { content: '∞'; position: absolute; right: -36px; bottom: -155px; color: rgba(238,90,38,.07); font: normal 34rem/1 var(--serif); pointer-events: none; }
+    .closing .wrap { position: relative; z-index: 1; max-width: 840px; text-align: center; }
+    .closing h2 { margin-top: 18px; }
+    .closing p { max-width: 620px; margin: 25px auto 32px; color: var(--muted); font: normal 1.13rem/1.6 var(--serif); }
+    .closing .button-row { justify-content: center; }
+    .closing .button-outline { border-color: var(--ink); color: var(--ink); }
+    .closing .button-outline:hover { background: var(--ink); color: var(--paper); }
+    footer { padding-block: 24px; border-top: 1px solid var(--line); background: var(--paper); }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: .77rem; }
+    footer a { text-underline-offset: 3px; }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr minmax(235px, .75fr); min-height: 0; }
+      .hero h1 { font-size: clamp(3.1rem, 7vw, 5rem); }
+      .part-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .part-card { min-height: 310px; }
+      .part-number { margin-bottom: 36px; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 38px, 520px); }
+      .site-nav { min-height: 70px; }
+      .nav-links { gap: 15px; }
+      .nav-links a:first-child { display: none; }
+      .nav-links .nav-buy { padding: 9px 12px; }
+      .hero { grid-template-columns: 1fr; gap: 55px; padding-block: 61px 75px; }
+      .hero h1 { font-size: clamp(3.4rem, 13vw, 5.3rem); }
+      .cover-stage { width: min(70%, 310px); padding-right: 12px; }
+      .strip-inner { display: block; padding-block: 17px; }
+      .strip p { font-size: .7rem; line-height: 1.8; }
+      .strip .format { margin-top: 4px; }
+      .intro, .practice { grid-template-columns: 1fr; gap: 28px; padding-block: 78px; }
+      .parts { padding-block: 75px; }
+      .section-heading { display: block; }
+      .section-heading > p { max-width: 100%; margin-top: 18px; }
+      .quote-band .wrap { grid-template-columns: 1fr; gap: 0; padding-block: 62px; }
+      .quote-symbol { font-size: 6rem; }
+      .closing { padding-block: 85px; }
+      .closing::after { font-size: 24rem; bottom: -90px; }
+    }
+    @media (max-width: 480px) {
+      .brand { font-size: .67rem; gap: 8px; }
+      .brand-mark { width: 33px; height: 33px; }
+      .nav-links .nav-buy { font-size: .7rem; }
+      .hero h1 { font-size: clamp(3.15rem, 14vw, 4.5rem); }
+      .button-row { display: grid; grid-template-columns: 1fr; }
+      .button { width: 100%; }
+      .part-grid { grid-template-columns: 1fr; }
+      .part-card { min-height: 0; padding: 27px; }
+      .part-number { margin-bottom: 23px; }
+      .practice-item { grid-template-columns: 38px 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button { transition: none; }
+      .button:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#book-title">Skip to content</a>
+  <main>
+  <div class="hero-shell">
+    <header class="site-nav wrap">
+      <a class="brand" href="https://attilakulik.com/" aria-label="Attila Kulik, home"><span class="brand-mark" aria-hidden="true">AK</span><span>Attila Kulik</span></a>
+      <nav class="nav-links" aria-label="Page navigation">
+        <a href="#inside">Inside the book</a>
+        <a class="nav-buy" href="#get-the-book">Get the book</a>
+      </nav>
+    </header>
+      <section class="hero wrap" aria-labelledby="book-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A book for fiction writers</p>
+          <h1 id="book-title">The Craft <em>Behind the Story</em></h1>
+          <p class="subtitle">A Systematic Guide to Structuring and Revising Fiction</p>
+          <p class="hero-summary">Move from “something isn’t working” to a question you can answer. A practical guide to the choices that shape a novel, from a single scene to the architecture of the whole book.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="https://www.amazon.co.uk/dp/B0HM3SKSG8" target="_blank" rel="noopener noreferrer">Get it on Amazon <span aria-hidden="true">&nbsp;↗</span></a>
+            <a class="button button-outline" href="https://books.apple.com/gb/book/the-craft-behind-the-story/id6820381869" target="_blank" rel="noopener noreferrer">Get it on Apple Books <span aria-hidden="true">&nbsp;↗</span></a>
+          </div>
+          <p class="hero-note">Ebook by Attila Kulik · Available on Kindle and Apple Books</p>
+        </div>
+        <div class="cover-stage">
+          <img src="cover.jpg" width="1000" height="1600" alt="The Craft Behind the Story book cover: white title on black with an orange ribbon motif" fetchpriority="high">
+        </div>
+      </section>
+  </div>
+
+      <div class="strip" aria-label="Book at a glance">
+        <div class="strip-inner wrap">
+          <p>18 chapters <span aria-hidden="true">✳</span> 4 parts <span aria-hidden="true">✳</span> 5 appendices</p>
+          <p class="format">A guide to writing and revision</p>
+        </div>
+      </div>
+
+      <section class="intro wrap" aria-labelledby="intro-title">
+        <div>
+          <span class="section-kicker">The idea</span>
+          <h2 id="intro-title">A novel is revised one decision at a time.</h2>
+        </div>
+        <div class="intro-copy">
+          <p>Advice about fiction often speaks of pace, tension or voice across an entire book. But revision happens in parts: <strong>a scene cut, a chapter moved, a viewpoint withdrawn, a reveal brought forward.</strong></p>
+          <p><em>The Craft Behind the Story</em> examines each unit a writer can change. What is it for? What would the reader miss if it were gone? And how can you tell whether it is doing its work?</p>
+        </div>
+      </section>
+
+      <section id="inside" class="parts" aria-labelledby="parts-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <div><span class="section-kicker">Inside the book</span><h2 id="parts-title">From the smallest detail to the whole story.</h2></div>
+            <p>Four parts follow the scale of a novel, then bring the tools together in a structural edit.</p>
+          </div>
+          <div class="part-grid">
+            <article class="part-card"><span class="part-number">01</span><h3>The Scene and Its Materials</h3><p>Scenes, sequels, dialogue exchanges and descriptive details: the building blocks of a draft.</p></article>
+            <article class="part-card"><span class="part-number">02</span><h3>The Joins</h3><p>Transitions, chapter breaks, backstory, flashbacks and multiple timelines: how the pieces connect.</p></article>
+            <article class="part-card"><span class="part-number">03</span><h3>The Architecture of the Whole</h3><p>Openings, middles, endings, viewpoint, subplots, reveals, arcs and theme.</p></article>
+            <article class="part-card"><span class="part-number">04</span><h3>Beyond the Book and Into Practice</h3><p>Series, genre and the structural edit: an order for using the earlier tools on a manuscript.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="practice wrap" aria-labelledby="practice-title">
+        <div>
+          <span class="section-kicker">Made to use on a draft</span>
+          <h2 id="practice-title">A method you can take back to the page.</h2>
+          <p class="practice-lead">Each chapter pairs close reading with questions and revision tools, so an observation about a story can become a choice about your own.</p>
+        </div>
+        <div class="practice-list">
+          <div class="practice-item"><span>01</span><div><h3>Diagnostic tests</h3><p>Seven to ten questions per chapter that you can answer from your own draft.</p></div></div>
+          <div class="practice-item"><span>02</span><div><h3>Failure patterns and remedies</h3><p>Symptoms, causes and possible repairs, with published works that bend the pattern successfully.</p></div></div>
+          <div class="practice-item"><span>03</span><div><h3>One story, revisited</h3><p>An invented family novel runs through the book, showing the same draft examined at different scales.</p></div></div>
+          <div class="practice-item"><span>04</span><div><h3>Checklists and exercises</h3><p>Chapter-level revision prompts, plus a symptom index and master checklist in revision order.</p></div></div>
+        </div>
+      </section>
+
+      <aside class="quote-band" aria-label="The book's guiding question">
+        <div class="wrap"><span class="quote-symbol" aria-hidden="true">“</span><blockquote>What is it for, and how can you tell whether it is doing it?<cite>— The Craft Behind the Story</cite></blockquote></div>
+      </aside>
+
+      <section id="get-the-book" class="closing" aria-labelledby="closing-title">
+        <div class="wrap">
+          <span class="section-kicker" style="justify-content:center">Begin with the draft you have</span>
+          <h2 id="closing-title">Find the question behind the problem.</h2>
+          <p>Whether you are planning a novel or revising one, <em>The Craft Behind the Story</em> offers a way to examine its parts and decide what to change next.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="https://www.amazon.co.uk/dp/B0HM3SKSG8" target="_blank" rel="noopener noreferrer">Get it on Amazon <span aria-hidden="true">&nbsp;↗</span></a>
+            <a class="button button-outline" href="https://books.apple.com/gb/book/the-craft-behind-the-story/id6820381869" target="_blank" rel="noopener noreferrer">Get it on Apple Books <span aria-hidden="true">&nbsp;↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+  <footer><div class="wrap"><span>© 2026 Attila Kulik</span><a href="https://philosophy.attilakulik.com/">Read the philosophy blog ↗</a></div></footer>
+</body>
+</html>
