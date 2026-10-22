@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#161513">
   <meta name="author" content="Attila Kulik">
-  <meta name="description" content="The Craft Behind the Story by Attila Kulik: a systematic guide to structuring and revising fiction, from the scene to the whole novel.">
+  <meta name="description" content="The Craft Behind the Story by Attila Kulik: a systematic guide to structuring and revising fiction, from the scene to the whole novel, and its companion volume, The Craft Behind the Story: Reference.">
   <link rel="canonical" href="https://attilakulik.com/the-craft-behind-the-story/">
   <meta property="og:type" content="book">
   <meta property="og:title" content="The Craft Behind the Story — Attila Kulik">
@@ -18,8 +18,19 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Book",
+      "@graph": [
+    {
+      "@type": "BookSeries",
+      "@id": "https://attilakulik.com/the-craft-behind-the-story/#series",
       "name": "The Craft Behind the Story",
+      "author": {"@type": "Person", "name": "Attila Kulik"}
+    },
+    {
+      "@type": "Book",
+      "@id": "https://attilakulik.com/the-craft-behind-the-story/#guide",
+      "name": "The Craft Behind the Story",
+      "isPartOf": {"@id": "https://attilakulik.com/the-craft-behind-the-story/#series"},
+      "position": 1,
       "alternativeHeadline": "A Systematic Guide to Structuring and Revising Fiction",
       "author": {"@type": "Person", "name": "Attila Kulik"},
       "bookFormat": "https://schema.org/EBook",
@@ -31,6 +42,25 @@
         "https://books.apple.com/gb/book/the-craft-behind-the-story/id6820381869"
       ],
       "description": "A guide for novelists to the structure of a novel, from the scene to the whole book, with diagnostic tests, failure patterns and revision checklists for each unit."
+    },
+    {
+      "@type": "Book",
+      "@id": "https://attilakulik.com/the-craft-behind-the-story/#reference",
+      "name": "The Craft Behind the Story: Reference",
+      "alternativeHeadline": "A Textbook of Narrative Structure",
+      "isPartOf": {"@id": "https://attilakulik.com/the-craft-behind-the-story/#series"},
+      "position": 2,
+      "author": {"@type": "Person", "name": "Attila Kulik"},
+      "bookFormat": "https://schema.org/EBook",
+      "inLanguage": "en-GB",
+      "image": "https://attilakulik.com/the-craft-behind-the-story/reference-cover.jpg",
+      "url": "https://attilakulik.com/the-craft-behind-the-story/#reference",
+      "sameAs": [
+        "https://www.amazon.co.uk/dp/B0HNPTJHMN"
+      ],
+      "description": "The companion to The Craft Behind the Story: the theory, complete catalogues of failure patterns, close readings and teaching material behind each of the guide’s eighteen chapters on the structure of the novel."
+    }
+      ]
     }
   </script>
   <style>
@@ -137,6 +167,27 @@
     .quote-band blockquote { margin: 0; font: normal clamp(1.6rem, 3vw, 2.8rem)/1.3 var(--serif); letter-spacing: -.025em; }
     .quote-band cite { display: block; margin-top: 17px; color: #c3b9ab; font: normal .8rem/1.4 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
 
+    .companion { --blue: #3cc4e4; --blue-ink: #156d84; padding-block: 108px 114px; background: #eae2d6; border-top: 1px solid #d3c9bb; }
+    .companion-grid { display: grid; grid-template-columns: minmax(240px, .62fr) minmax(0, 1.38fr); align-items: center; gap: clamp(48px, 8vw, 116px); }
+    .companion .section-kicker { color: var(--blue-ink); }
+    .companion .section-kicker::before { background: var(--blue); }
+    .companion-cover { position: relative; width: min(100%, 330px); justify-self: center; padding: 10px 18px 14px 0; }
+    .companion-cover::before { content: ''; position: absolute; inset: 8% -2% 4% 12%; border: 1px solid rgba(60,196,228,.75); transform: rotate(-5deg); }
+    .companion-cover img { position: relative; width: 100%; height: auto; border-radius: 2px; box-shadow: 18px 24px 34px rgba(0,0,0,.3), 3px 5px 9px rgba(0,0,0,.25); transform: rotate(3deg); }
+    .companion h2 { margin: 17px 0 0; font: normal clamp(2.3rem, 4vw, 4rem)/1.06 var(--serif); letter-spacing: -.045em; text-wrap: balance; }
+    .companion h2 em { color: var(--blue-ink); }
+    .companion-subtitle { margin: 12px 0 0; color: var(--muted); font: italic 1.2rem/1.4 var(--serif); }
+    .companion-copy > p:not(.companion-subtitle) { max-width: 640px; margin: 22px 0 0; color: #3e3932; font: normal 1.12rem/1.65 var(--serif); }
+    .companion-list { max-width: 640px; margin: 26px 0 0; padding: 0; list-style: none; border-top: 1px solid #cfc5b7; }
+    .companion-list li { padding: 13px 0 13px 26px; border-bottom: 1px solid #cfc5b7; color: var(--muted); font-size: .92rem; line-height: 1.55; position: relative; }
+    .companion-list li::before { content: '✳'; position: absolute; left: 0; color: var(--blue-ink); }
+    .companion .button-row { margin-top: 32px; }
+    .button-blue { color: #071a20; background: var(--blue); }
+    .button-blue:hover { background: #6dd6ee; }
+    .button-soon { border: 1px dashed #9c9284; color: var(--muted); cursor: default; }
+    .button-soon:hover { transform: none; }
+    .hero-note a { color: #ff9b70; text-underline-offset: 3px; }
+
     .closing { position: relative; overflow: hidden; padding-block: 112px 120px; background: var(--paper); }
     .closing::after { content: '∞'; position: absolute; right: -36px; bottom: -155px; color: rgba(238,90,38,.07); font: normal 34rem/1 var(--serif); pointer-events: none; }
     .closing .wrap { position: relative; z-index: 1; max-width: 840px; text-align: center; }
@@ -160,7 +211,7 @@
       .wrap { width: min(100% - 38px, 520px); }
       .site-nav { min-height: 70px; }
       .nav-links { gap: 15px; }
-      .nav-links a:first-child { display: none; }
+      .nav-links a:not(.nav-buy) { display: none; }
       .nav-links .nav-buy { padding: 9px 12px; }
       .hero { grid-template-columns: 1fr; gap: 55px; padding-block: 61px 75px; }
       .hero h1 { font-size: clamp(3.4rem, 13vw, 5.3rem); }
@@ -169,6 +220,9 @@
       .strip p { font-size: .7rem; line-height: 1.8; }
       .strip .format { margin-top: 4px; }
       .intro, .practice { grid-template-columns: 1fr; gap: 28px; padding-block: 78px; }
+      .companion { padding-block: 78px; }
+      .companion-grid { grid-template-columns: 1fr; gap: 50px; }
+      .companion-cover { width: min(62%, 270px); }
       .parts { padding-block: 75px; }
       .section-heading { display: block; }
       .section-heading > p { max-width: 100%; margin-top: 18px; }
@@ -215,6 +269,7 @@
       </div>
       <nav class="nav-links" aria-label="Page navigation">
         <a href="#inside">Inside the book</a>
+        <a href="#reference">The companion</a>
         <a class="nav-buy" href="#get-the-book">Get the book</a>
       </nav>
     </header>
@@ -228,7 +283,7 @@
             <a class="button button-primary" href="https://www.amazon.co.uk/dp/B0HM3SKSG8" target="_blank" rel="noopener noreferrer">Get it on Amazon <span aria-hidden="true">&nbsp;↗</span></a>
             <a class="button button-outline" href="https://books.apple.com/gb/book/the-craft-behind-the-story/id6820381869" target="_blank" rel="noopener noreferrer">Get it on Apple Books <span aria-hidden="true">&nbsp;↗</span></a>
           </div>
-          <p class="hero-note">Ebook by Attila Kulik · Available on Kindle and Apple Books</p>
+          <p class="hero-note">Ebook by Attila Kulik · Available on Kindle and Apple Books<br>New: the companion volume, <a href="#reference"><em>The Craft Behind the Story: Reference</em></a></p>
         </div>
         <div class="cover-stage">
           <img src="cover.jpg" width="1000" height="1600" alt="The Craft Behind the Story book cover: white title on black with an orange ribbon motif" fetchpriority="high">
@@ -287,11 +342,35 @@
         <div class="wrap"><span class="quote-symbol" aria-hidden="true">“</span><blockquote>What is it for, and how can you tell whether it is doing it?<cite>— The Craft Behind the Story</cite></blockquote></div>
       </aside>
 
+      <section id="reference" class="companion" aria-labelledby="reference-title">
+        <div class="wrap companion-grid">
+          <div class="companion-cover">
+            <img src="reference-cover.jpg" width="1000" height="1600" alt="The Craft Behind the Story: Reference book cover: white title on black with a blue ribbon motif" loading="lazy">
+          </div>
+          <div class="companion-copy">
+            <span class="section-kicker">The companion volume · Now on Kindle</span>
+            <h2 id="reference-title">The Craft Behind the Story: <em>Reference</em></h2>
+            <p class="companion-subtitle">A Textbook of Narrative Structure</p>
+            <p>The two books share their eighteen chapters, their chapter numbers and their terms, and each can be read without the other. The guide is written for novelists at the desk; the <em>Reference</em> is written for readers who want the argument behind the method, and for teachers and students of fiction.</p>
+            <ul class="companion-list">
+              <li>The theory at length: Genette, Barthes, Swain, Booth, Brooks, Grice and Goffman, Woloch, and research on how readers process narrative.</li>
+              <li>Ten or more failure patterns in most chapters, each with its symptom, mechanism, remedy and exception.</li>
+              <li>Close readings of <em>Middlemarch</em>, <em>Madame Bovary</em>, <em>Anna Karenina</em>, <em>Great Expectations</em>, <em>Things Fall Apart</em>, <em>The Great Gatsby</em> and more, alongside recent fiction, film and television.</li>
+              <li>For teachers: exercises, seminar questions and an assessment rubric for every chapter.</li>
+            </ul>
+            <div class="button-row">
+              <a class="button button-blue" href="https://www.amazon.co.uk/dp/B0HNPTJHMN" target="_blank" rel="noopener noreferrer">Get the Reference on Amazon <span aria-hidden="true">&nbsp;↗</span></a>
+              <span class="button button-soon">Apple Books · Coming soon</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="get-the-book" class="closing" aria-labelledby="closing-title">
         <div class="wrap">
           <span class="section-kicker" style="justify-content:center">Begin with the draft you have</span>
           <h2 id="closing-title">Find the question behind the problem.</h2>
-          <p>Whether you are planning a novel or revising one, <em>The Craft Behind the Story</em> offers a way to examine its parts and decide what to change next.</p>
+          <p>Whether you are planning a novel or revising one, <em>The Craft Behind the Story</em> offers a way to examine its parts and decide what to change next. For the theory behind the method, see its companion, <a href="#reference"><em>The Craft Behind the Story: Reference</em></a>.</p>
           <div class="button-row">
             <a class="button button-primary" href="https://www.amazon.co.uk/dp/B0HM3SKSG8" target="_blank" rel="noopener noreferrer">Get it on Amazon <span aria-hidden="true">&nbsp;↗</span></a>
             <a class="button button-outline" href="https://books.apple.com/gb/book/the-craft-behind-the-story/id6820381869" target="_blank" rel="noopener noreferrer">Get it on Apple Books <span aria-hidden="true">&nbsp;↗</span></a>
