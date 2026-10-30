@@ -12,3 +12,23 @@
 .book-choice:hover>span{background:var(--accent)}
 .book-choice:focus-visible{outline:3px solid #e36b3c;outline-offset:5px}
 @media(max-width:520px){.book-choices{grid-template-columns:minmax(0,240px);justify-content:center}}
+
+/* Reader colour theme: Core, Reference and search pages only.
+   Light is the default. theme.js sets data-theme="dark" on <html>;
+   pages without the switch never receive that attribute. */
+.masthead nav{align-items:center}
+.theme-toggle{padding:.1rem .75rem;border:1px solid #6f665d;border-radius:999px;background:transparent;color:#f7f1e7;font:700 .86rem/1.5 var(--sans);cursor:pointer}
+.theme-toggle:hover{color:#ff9f73;border-color:#ff9f73}
+.theme-toggle[hidden]{display:none}
+html[data-theme="dark"]{color-scheme:dark;--ink:#e8e1d6;--muted:#ada395;--paper:#171513;--cream:#201d1a;--line:#3a342e;--accent:#ec9a74;--dark:#0e0d0c}
+html[data-theme="dark"] .masthead{border-bottom:1px solid var(--line)}
+html[data-theme="dark"] .skip{background:var(--cream);color:var(--ink)}
+html[data-theme="dark"] .book-text .subtitle{color:#cfc6b9}
+html[data-theme="dark"] .sidebar li a{color:#c3b9ac}
+html[data-theme="dark"] .sidebar li a:hover,html[data-theme="dark"] .sidebar li a[aria-current]{background:#2a2521}
+html[data-theme="dark"] .book-text blockquote{background:#211d19;color:#ddd5c9}
+html[data-theme="dark"] .book-text code{background:#2a2521}
+html[data-theme="dark"] .contents-list li a:hover,html[data-theme="dark"] .volume-list li a:hover{background:#211d19}
+html[data-theme="dark"] .start-link{background:var(--accent);color:#171513}
+html[data-theme="dark"] .search-controls input,html[data-theme="dark"] .search-controls select{background:#201d1a;color:var(--ink);border-color:#6f665d}
+html[data-theme="dark"] .search-hit mark{background:#6b5220}
