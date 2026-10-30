@@ -51,3 +51,10 @@ html[data-theme="dark"] .search-hit mark{background:#6b5220}
 .route-list a:hover{background:#faf4eb}
 .route-note{margin:0;color:var(--muted);font-size:.86rem}
 html[data-theme="dark"] .route-list a:hover{background:#211d19}
+
+/* Reading-route bar, drawn by routes.js on the pages of a stored route */
+.route-bar{display:flex;flex-wrap:wrap;align-items:baseline;gap:.35rem 1.2rem;margin:-1rem 0 2rem;padding:.7rem 1rem;border-left:3px solid var(--accent);background:var(--cream);font-size:.84rem;line-height:1.45}
+.route-bar p{margin:0}
+.route-bar p:first-child{font-weight:800;color:var(--accent)}
+.route-leave{margin-left:auto;padding:0;border:0;background:none;color:var(--muted);font:inherit;text-decoration:underline;text-underline-offset:.18em;cursor:pointer}
+.route-leave:hover{color:var(--accent)}
