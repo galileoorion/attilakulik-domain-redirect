@@ -17,8 +17,9 @@
    Light is the default. theme.js sets data-theme="dark" on <html>;
    pages without the switch never receive that attribute. */
 .masthead nav{align-items:center}
-.theme-toggle{padding:.1rem .75rem;border:1px solid #6f665d;border-radius:999px;background:transparent;color:#f7f1e7;font:700 .86rem/1.5 var(--sans);cursor:pointer}
-.theme-toggle:hover{color:#ff9f73;border-color:#ff9f73}
+.theme-toggle{margin:0;padding:0 0 0 1.25rem;border:0;border-left:1px solid #4a433c;border-radius:0;background:none;color:#f7f1e7;font:700 .86rem/1.55 var(--sans);cursor:pointer}
+.theme-toggle:hover{color:#ff9f73}
+@media(max-width:520px){.theme-toggle{padding-left:.8rem}}
 .theme-toggle[hidden]{display:none}
 html[data-theme="dark"]{color-scheme:dark;--ink:#e8e1d6;--muted:#ada395;--paper:#171513;--cream:#201d1a;--line:#3a342e;--accent:#ec9a74;--dark:#0e0d0c}
 html[data-theme="dark"] .masthead{border-bottom:1px solid var(--line)}
