@@ -82,3 +82,26 @@ button.key-term:hover,button.key-term[aria-expanded="true"]{border-color:var(--a
 .key-term-bubble[data-side="above"]::before{bottom:-6px;border-left:0;border-top:0}
 html[data-theme="dark"] .key-term-bubble{background:#201d1a;box-shadow:0 10px 30px #0008}
 html[data-theme="dark"] .key-term-bubble::before{background:#201d1a}
+
+/* Tables and cards (2026-11-02). The same design as the EPUB stylesheet,
+   Publishing/epub.css in the manuscript repository, in the site's palette:
+   horizontal rules only, small-capital headers and a faint tint on every
+   other row. When the text column is narrow, a table becomes one card per
+   row: the first cell is the card's heading and every other cell has its
+   column name above it. The classes and data-label attributes come from
+   Scripts/table_cards.py in the manuscript, which build_preview.py runs on
+   every page. The widths are container queries on the text column, in em
+   of its font size, matching the EPUB's breakpoints: tables of five or more
+   columns become cards below 40em, all tables of three or more below 30em.
+   Browsers without container queries keep the tables. */
+.book-text{container-type:inline-size;--rule:#9a8f82;--stripe:#f8f3ea}
+html[data-theme="dark"] .book-text{--rule:#6f665c;--stripe:#1e1b18}
+.book-text table{display:table;width:100%;max-width:100%;overflow:visible;border-collapse:collapse;margin:1.8em 0;font-size:.9em;line-height:1.5;border-top:2px solid var(--rule);border-bottom:2px solid var(--rule)}
+.book-text table.wide{font-size:.85em}
+.book-text th,.book-text td{border:0;border-bottom:1px solid var(--line);padding:.55em .75em;vertical-align:top;text-align:left}
+.book-text th{background:none;font-weight:normal;font-variant:small-caps;letter-spacing:.05em;vertical-align:bottom;border-bottom:1px solid var(--rule)}
+.book-text tbody tr:last-child td{border-bottom:0}
+.book-text tbody tr:nth-child(even) td{background:var(--stripe)}
+.book-text td[style*="right"],.book-text th[style*="right"]{text-align:right}
+@container (max-width:40em){.book-text table.wide{display:block;width:auto;max-width:none;border:0;font-size:1em;line-height:inherit;margin:1.5em 0}.book-text table.wide thead{display:none}.book-text table.wide tbody,.book-text table.wide tr,.book-text table.wide td{display:block}.book-text table.wide tr{margin:0 0 1em;padding:.75em 1em .85em;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;background:var(--stripe)}.book-text table.wide td{border:0;padding:0;margin:.6em 0 0;background:none!important;text-align:left!important}.book-text table.wide td:empty{display:none}.book-text table.wide td[data-label]::before{content:attr(data-label);display:block;margin-bottom:.15em;font:700 .66rem/1.4 var(--sans);letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}.book-text table.wide td:first-child{margin:0;padding-bottom:.55em;border-bottom:1px solid var(--line);font-weight:700;font-size:1.04em;line-height:1.35}.book-text table.wide td:first-child[data-label]::before{content:attr(data-label) " ";display:inline;margin:0;font:inherit;letter-spacing:0;text-transform:none;color:inherit}.book-text table.wide.numbered td:first-child,.book-text table.wide.numbered td:nth-child(2){display:inline;vertical-align:baseline;margin:0;padding:0;border:0;font-weight:700;font-size:1.04em}.book-text table.wide.numbered td:first-child{color:var(--accent)}.book-text table.wide.numbered td:first-child::after{content:". "}.book-text table.wide.numbered td:nth-child(3){margin-top:.55em;padding-top:.65em;border-top:1px solid var(--line)}}
+@container (max-width:30em){.book-text table{font-size:.88em}.book-text th,.book-text td{padding:.45em .5em}.book-text table.cards{display:block;width:auto;max-width:none;border:0;font-size:1em;line-height:inherit;margin:1.5em 0}.book-text table.cards thead{display:none}.book-text table.cards tbody,.book-text table.cards tr,.book-text table.cards td{display:block}.book-text table.cards tr{margin:0 0 1em;padding:.75em 1em .85em;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;background:var(--stripe)}.book-text table.cards td{border:0;padding:0;margin:.6em 0 0;background:none!important;text-align:left!important}.book-text table.cards td:empty{display:none}.book-text table.cards td[data-label]::before{content:attr(data-label);display:block;margin-bottom:.15em;font:700 .66rem/1.4 var(--sans);letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}.book-text table.cards td:first-child{margin:0;padding-bottom:.55em;border-bottom:1px solid var(--line);font-weight:700;font-size:1.04em;line-height:1.35}.book-text table.cards td:first-child[data-label]::before{content:attr(data-label) " ";display:inline;margin:0;font:inherit;letter-spacing:0;text-transform:none;color:inherit}.book-text table.cards.numbered td:first-child,.book-text table.cards.numbered td:nth-child(2){display:inline;vertical-align:baseline;margin:0;padding:0;border:0;font-weight:700;font-size:1.04em}.book-text table.cards.numbered td:first-child{color:var(--accent)}.book-text table.cards.numbered td:first-child::after{content:". "}.book-text table.cards.numbered td:nth-child(3){margin-top:.55em;padding-top:.65em;border-top:1px solid var(--line)}}
