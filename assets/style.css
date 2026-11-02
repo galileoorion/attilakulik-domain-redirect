@@ -111,7 +111,7 @@ html[data-theme="dark"] .book-text{--rule:#6f665c;--stripe:#1e1b18}
 .checklist{list-style:none;padding-left:0;margin:0 0 1.4em}
 .checklist li{margin:0 0 .5em}
 .checklist label{display:flex;gap:.7em;align-items:flex-start;cursor:pointer}
-.checklist input{flex:none;width:1.1em;height:1.1em;margin:.38em 0 0;accent-color:var(--accent);cursor:pointer}
+.checklist input{flex:none;font-size:inherit;width:1em;height:1em;margin:.365em 0 0;accent-color:var(--accent);cursor:pointer}
 .checklist li.done>label>span{color:var(--muted)}
 .checklist-bar{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1.2rem;margin:1.6rem 0 .6rem;padding:.65rem 1rem;border-left:3px solid var(--accent);background:var(--cream);font:.86rem/1.45 var(--sans)}
 .checklist-bar[hidden],.checklist-note[hidden]{display:none}
@@ -125,7 +125,10 @@ html[data-theme="dark"] .book-text{--rule:#6f665c;--stripe:#1e1b18}
 
 /* Task lists ("- [ ]" in the Markdown), as in the chapters' revision
    checklists: each item has pandoc's checkbox instead of a bullet, never
-   both, with wrapped lines aligned after the box. */
+   both, with wrapped lines aligned after the box. The box takes the
+   text's size (font-size: inherit; form controls otherwise use the
+   browser's own) and sits centred on the first line: (1.78 - 1) / 2,
+   less a hair for the font's ascent. */
 .book-text ul.task-list{list-style:none;padding-left:0}
 .book-text ul.task-list label{display:flex;gap:.7em;align-items:flex-start}
-.book-text ul.task-list input{flex:none;width:1.1em;height:1.1em;margin:.38em 0 0;accent-color:var(--accent)}
+.book-text ul.task-list input{flex:none;font-size:inherit;width:1em;height:1em;margin:.365em 0 0;accent-color:var(--accent)}
