@@ -58,3 +58,12 @@ html[data-theme="dark"] .route-list a:hover{background:#211d19}
 .route-bar p:first-child{font-weight:800;color:var(--accent)}
 .route-leave{margin-left:auto;padding:0;border:0;background:none;color:var(--muted);font:inherit;text-decoration:underline;text-underline-offset:.18em;cursor:pointer}
 .route-leave:hover{color:var(--accent)}
+/* Key terms on Core chapter openings: inline tags in one paragraph.
+   build_preview.py wraps each term; the hidden separators keep the
+   sentence for copying, screen readers and search. */
+.book-text .key-terms{line-height:1.95}
+.key-term{display:inline-block;max-width:100%;margin:.12em 0;padding:.05em .5em;border:1px solid var(--line);border-radius:.35em;background:var(--cream);color:var(--ink);font:500 .8em/1.45 var(--sans);vertical-align:baseline}
+.key-term em{font-style:italic}
+.key-term-sep{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.key-terms-note{color:var(--muted);font-size:.92em}
+html[data-theme="dark"] .key-term{background:#24201c;border-color:#463f37}
