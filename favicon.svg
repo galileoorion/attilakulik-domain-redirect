@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title id="title">Ribbon loop favicon sketch</title>
-  <rect width="64" height="64" rx="12" fill="#161513"/>
-  <path d="M32 32C25 20 9 20 9 32s16 12 23 0 23-12 23 0-16 12-23 0Z"
-        fill="none" stroke="#ee5a26" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
