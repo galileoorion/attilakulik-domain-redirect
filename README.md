@@ -1,7 +1,7 @@
 # attilakulik.com
 
-GitHub Pages source for the main domain. The homepage sends visitors to
-[`/the-craft-behind-the-story/`](https://attilakulik.com/the-craft-behind-the-story/).
+GitHub Pages source for the main domain. The homepage introduces *The Craft Behind the Story*. The former
+`/the-craft-behind-the-story/` landing URL forwards visitors to `/`.
 Unknown paths show a 404 page with links to the book and the separate
 philosophy blog at `philosophy.attilakulik.com`.
 
